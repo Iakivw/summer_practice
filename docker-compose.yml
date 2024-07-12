@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+    test_db:
+        build: .
+        restart: always
+        ports:
+            - 12323:5432
+        environment:
+            - POSTGRES_USER=db
+            - POSTGRES_PASSWORD=db
+            - POSTGRES_DB=test_db
